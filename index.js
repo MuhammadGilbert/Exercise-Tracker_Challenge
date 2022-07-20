@@ -10,6 +10,9 @@ app.use(express.static('public'))
 const User = require('./models/users')
 const Exercise = require('./models/exercise')
 
+app.use(express.json());
+app.use(express.urlencoded( {extended: true} ));
+
 mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
