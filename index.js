@@ -75,7 +75,7 @@ app.post('/api/users/:_id/exercises', (req, res) => {
     res.json("Path `description` is required.")
     return
   }
-  if(!duration){
+  if(!durationEntered){
     res.json("Path `duration` is required.")
     return
   }
